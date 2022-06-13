@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>    
+    <link href="https://github.com/Salva080/Trabajo-Practico-Integrador/blob/gh-pages/img/argentum.png?raw=true" type="img/argentum.png" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <title>ArgentumStudio</title>
+    <meta charset="UTF-8">
+    <style>
+        * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body{
+                min-height: 100wh;
+                background-image: url('imagen1.jpg.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+
+            form{
+                width: 400px;
+                background: #2e3235;
+                padding: 30px;
+                margin: auto;
+                margin-top: 100px;
+                border-radius: 4px;
+                font-family: 'calibri';
+                color: white;
+                box-shadow: 7px 13px 37px #000; 
+            }
+
+            .contenedor {
+	            width: 100%;
+	            margin: center;
+            }
+
+            .miform h4{
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            .controls{
+                width: 100%;
+                background: #24303c;
+                padding: 10px;
+                border-radius: 4px;
+                margin-bottom: 16px;
+                border: 1px solid #1f53c5;
+                font-family: 'calibri';
+                font-size: 18px;
+            }
+
+            .seleccion{
+                width: 100%;
+                background: #24303c;
+                padding: 10px;
+                border-radius: 4px;
+                margin-bottom: 16px;
+                border: 1px solid #1f53c5;
+                font-family: 'calibri';
+                font-size: 25px;
+            }
+
+            .miform p{
+                height: 40px;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .boton{
+                width: 100%;
+                background: #1f53c5;
+                border: none;
+                padding: 12px;
+                color: white;
+                margin: 16px 0;
+                font-size: 16px;
+            }
+
+            .cancelar {
+                width: 100%;
+                background: #c51f1f;
+                border: none;
+                padding: 5px;
+                color: white;
+                margin: center;
+                font-size: 16px;
+            }
+
+            .normal{
+                width: 100%;
+                background: #243c26;
+                padding: 10px;
+                border-radius: 4px;
+                margin-bottom: 16px;
+                border: 1px solid #1fc524;
+                font-family: 'calibri';
+                font-size: 18px;
+            }
+
+            
+
+            .error{
+                width: 100%;
+                background: #ff00004f;
+                padding: 10px;
+                border-radius: 4px;
+                margin-bottom: 16px;
+                border: 1px solid #ff0000;
+                font-family: 'calibri';
+                font-size: 18px;
+            }
+            header {
+                display: flex;
+                height: 70px;
+                padding: 10px;
+                background-color: rgb(255, 255, 255);
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            header .contenedor {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            header .logotipo {
+                font-family: 'Bebas Neue', cursive;
+                font-weight: normal;
+                color: var(--negro);
+                font-size: 40px;
+                margin-right: 55%; 
+            }
+
+            header .contenedor {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+            }
+
+            header nav a {
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+                margin-right: 20px; 
+                border-style: outset;
+                border-bottom: none;
+                border-top: none;
+            }
+
+            header nav a:hover,
+            header nav a.activo {
+                color: rgb(255, 0, 0);
+            }
+
+    </style>
+    <script>
+        function validacion(){
+        var patronmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        nombre = document.miform.nombre;
+        apellido = document.miform.apellido;
+        correo = document.miform.correo;
+        contraseña = document.miform.contraseña;
+        argentum = document.miform.argentum;
+
+        if(nombre.value.trim() == "" || nombre.value.trim().length > 20){
+            alert("Ingrese un nombre de 20 caracteres como maximo");
+            nombre.className = "error";
+            nombre.focus();
+            return false;
+        }else
+        nombre.className = "normal";
+
+        if(apellido.value.trim() == "" || apellido.value.trim().length > 20){
+            alert("Ingrese un apellido de 20 caracteres como maximo");
+            apellido.className = "error";
+            apellido.focus();
+            return false;
+        }else
+        apellido.className = "normal";
+
+        if(!patronmail.test(correo.value)){
+            alert ("Debe ingresar un email valido");
+            correo.className = "error";
+            correo.focus();
+            return false;
+        }else
+        correo.className = "normal";
+
+        if(contraseña.value.trim == "" || contraseña.value.trim().length < 8){
+            alert ("Ingrese una contraseña con mas de 8 caracteres");
+            contraseña.className = "error";
+            contraseña.focus();
+            return false;
+        }else
+        contraseña.className = "normal";
+
+        if(argentum.selectedIndex == 0){
+            alert("Debe elegir una opcion");
+            argentum.className = "error";
+            argentum.focus();
+            return false;
+        }else
+        argentum.className = "normal";
+
+        if(confirm("¿Esta seguro que desea enviar su registro?")){
+            alert("Gracias por ser parte de esta comunidad!");
+            return true;
+        } else
+        return false;
+}
+    </script>
+</head>
+<header>
+    <div class="contenedor">
+        <h2 class="logotipo">ArgentumStudio</h2> 
+        <nav>
+            <a href="file:///E:/WEB%202022/Trabajo%20Practico%20Integrador/index.html">INICIO</a>
+            <a href="file:///E:/WEB%202022/Trabajo%20Practico%20Integrador/indexMiembros.html">EDITORES</a>
+        </nav>
+    </div>
+</header>
+<body>
+    <form action="#" method="get" name="miform">
+        <h4>Por favor ingrese los siguientes datos</h4>
+        <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" >
+        <input class="controls" type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" >
+        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" >
+        <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
+        <select class="seleccion" name="argentum" id="argentum" aria-placeholder="ArgentumStudio">
+            <option value="seleccione">--Seleccione--</option>
+            <option value="editor">Editor</option>
+            <option value="comunidad">Comunidad</option>
+        </select>
+        <p>Sea parte de ArgentumStudio como comunidad o editor.</p>
+        <input class="boton" type="submit" value="Registrar" onclick="return validacion()">
+        <input class="cancelar" type="reset" value="Cancelar">
+    </form>
+</body>
+</html>

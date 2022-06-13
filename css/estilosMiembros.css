@@ -1,0 +1,135 @@
+:root {
+	--negro: #000000;
+	--fondo: #7b7b7b;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: rgba(116, 116, 116, 0.577);
+	font-family: 'Open Sans', sans-serif;
+	display: center;
+}
+
+#lideres {
+	font-size: larger;
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--negro);
+	font-size: 60px;
+	margin-right: 55%;
+
+}
+
+.parrafo {
+	margin-left: 250px;
+	border-style: outset;
+	border-top: none; 
+	border-bottom: none; 
+	border-right: none;
+}
+
+.designers {
+	margin-left: 290px;
+	border-style: outset;
+	border-top: none; 
+	border-bottom: none; 
+	border-right: none;
+}
+
+#miembros{
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--negro);
+	font-size: 55px;
+	margin-right: 55%; 
+
+}
+
+#test{
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--negro);
+	font-size: 40px;
+	margin-right: 55%; 
+}
+
+#designers{
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--negro);
+	font-size: 30px;
+	margin-right: 55%; 
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+div.imagen {
+	display: flexbox;
+	margin-left: 250px;
+}
+
+div.nombre{
+	margin-left: 150px;
+	color: whitesmoke;
+}
+
+div.nombre > a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+div.nombre > a:hover,
+div.nombre > a.activo{
+	color: #000000;
+}
+
+header {
+	display: flex;
+	height: 70px;
+	padding-top: 0,5%;
+	background-color: rgb(255, 255, 255);
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	text-shadow: 0.1em 0.1em #333;
+	color: rgb(255, 255, 255);
+	font-size: 50px;
+	margin-right: 55%; 
+	border-style: groove;
+	border-left: none;
+	border-right: none;
+}
+
+header nav a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	margin-right: 20px;
+	border-style: outset;
+	border-bottom: none;
+	border-top: none;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: rgb(255, 0, 0);
+}
