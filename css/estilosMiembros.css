@@ -13,7 +13,7 @@
 body {
 	background: rgba(116, 116, 116, 0.577);
 	font-family: 'Open Sans', sans-serif;
-	display: center;
+	display: flexbox;
 }
 
 #lideres {
@@ -23,10 +23,11 @@ body {
 	color: var(--negro);
 	font-size: 60px;
 	margin-right: 55%;
-
+	
 }
 
 .parrafo {
+	color: rgb(0, 0, 0);
 	margin-left: 250px;
 	border-style: outset;
 	border-top: none; 
@@ -77,9 +78,26 @@ div.imagen {
 	margin-left: 250px;
 }
 
-div.nombre{
+
+div.nombreBlackout{
 	margin-left: 150px;
 	color: whitesmoke;
+}
+
+div.nombreSalva{
+	margin-left: 280px;
+	color: whitesmoke;
+}
+
+div.nombreZonny{
+	margin-left: 280px;
+	color: whitesmoke;
+}
+
+div.nombre{
+	margin-left: 250px;
+	color: whitesmoke;
+	justify-content: center;
 }
 
 div.nombre > a{
@@ -91,6 +109,43 @@ div.nombre > a:hover,
 div.nombre > a.activo{
 	color: #000000;
 }
+
+div.nombreBlackout > a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+div.nombreSalva > a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+div.nombreZonny > a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+div.nombreBlackout > a:hover,
+div.nombreBlackout > a.activo{
+	color: #000000;
+}
+
+div.nombreSalva > a:hover,
+div.nombreSalva > a.activo{
+	color: #000000;
+}
+
+div.nombreZonny > a:hover,
+div.nombreZonny > a.activo{
+	color: #000000;
+}
+
+div.descripcion{
+	font-size: 30px;
+	margin-left: 150px;
+	color: rgb(60, 26, 26);
+}
+
 
 header {
 	display: flex;
